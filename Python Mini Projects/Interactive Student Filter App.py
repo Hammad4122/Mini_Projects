@@ -1,6 +1,7 @@
 import pandas as pd
 import time
 import os
+import colorama as cm
 def menu():
     print("1. Show A+ Grade Students")
     print("2. Show Students from a Specific City")
@@ -79,29 +80,15 @@ while True:
             continue
     if user_choice == 1:
         Aplus_Students()
-        enter_input = input("Press enter to go back to menu. ")
-        if enter_input == "": 
-            loadingTomenu()
-            continue
     if user_choice == 2:
         specified_city()
-        enter_input = input("Press enter to go back to menu. ")
-        if enter_input == "": 
-            loadingTomenu()
-            continue
     if user_choice == 3:
         passed_students()
-        enter_input = input("Press enter to go back to menu. ")
-        if enter_input == "": 
-            loadingTomenu()
-            continue
     if user_choice == 4:
         lowerGrade_students()
-        enter_input = input("Press enter to go back to menu. ")
-        if enter_input == "": 
-            loadingTomenu()
-            continue
     if user_choice == 5:
         os.system('CLS')
         exit()
         break
+    input("\nPress Enter to go back to menu.")
+    loadingTomenu()
