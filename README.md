@@ -24,8 +24,13 @@ This repository contains a collection of Python mini-projects I've built during 
 - **Rock, Paper, Scissors Game (Menu Version)**  
   Classic game implemented with a text-based menu system and replay options.
 
-- **Interactive Student Filter App**  
-  Uses pandas to filter student records based on marks, names, or subjects interactively.
+- **Interactive Student Filter App** 🆕  
+  A menu-based app using pandas that allows users to:
+  - View A+ grade students
+  - Search students from a specific city and display their records
+  - Filter students who passed (≥ 60 marks)
+  - Show students with grade C or below
+  - Save data to a CSV file for future reference
 
 ---
 
@@ -35,3 +40,4 @@ This repository contains a collection of Python mini-projects I've built during 
    ```bash
    git clone https://github.com/Hammad4122/Mini_Projects.git
    cd Mini_Projects
+
