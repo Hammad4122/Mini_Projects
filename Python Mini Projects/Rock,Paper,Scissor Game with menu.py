@@ -43,9 +43,16 @@ while True:
         else:
             print("Computer Wins!")
         print(f"Computer Choice : {computer_choice}")
-        print("\nLoading Menu...")
-        t.sleep(3.5)
-        os.system('CLS')
+        while True:
+            go_back = input("\nPress enter to go back to menu.")
+            if go_back != "":
+                print("Error!!!!\n")
+                continue
+            else :
+                print("\nLoading Menu...")
+                t.sleep(3.5)
+                os.system('CLS')
+                break
     elif user_request == options[1] :
         print("Exiting game in:", end=" ", flush=True)
         for i in range(3, 0, -1):
