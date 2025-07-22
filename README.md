@@ -38,6 +38,6 @@ This repository contains a collection of Python mini-projects I've built during 
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/Hammad4122/Mini_Projects.git
+   git clone https://github.com/Hammad4122/Python_Mini_Projects.git
    cd Mini_Projects
 
