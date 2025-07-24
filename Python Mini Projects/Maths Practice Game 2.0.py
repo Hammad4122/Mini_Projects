@@ -145,4 +145,5 @@ while True:
             time.sleep(1)
         break
 print("\nGame Exited Successfully...")
-time.sleep(2)
+print("Developed by Muhammad Hammad Ateeq.")
+time.sleep(3)
