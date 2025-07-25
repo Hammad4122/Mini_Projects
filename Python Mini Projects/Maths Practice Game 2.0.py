@@ -144,6 +144,7 @@ while True:
             print(i,end=" ",flush=True)
             time.sleep(1)
         break
+clear_screen()
 print("\nGame Exited Successfully...")
 print("Developed by Muhammad Hammad Ateeq.")
 time.sleep(3)
