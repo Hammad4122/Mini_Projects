@@ -30,11 +30,11 @@
 #     print()
 import time
 import os
+def numberOfrows():
+    ROWS = int(input("Enter number of rows : "))
+    return ROWS
 try : 
     while True:
-        def numberOfrows():
-            ROWS = int(input("Enter number of rows : "))
-            return ROWS
         print("Chose a pattern (1-4) : ")
         print("1. Right-angled Triangle")
         print("2. Pyramid")
