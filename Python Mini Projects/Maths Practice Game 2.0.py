@@ -48,9 +48,10 @@ def numberOfquestions():
             time.sleep(2)
             continue
 
-print("\033[1m==== MATH PRACTICE GAME ====\033[0m\n".center(120))
+
 while True:
     correct_answers = 0
+    print("\033[1m==== MATH PRACTICE GAME ====\033[0m\n".center(120))
     print("\033[1m==== Menu ====\033[0m\n".center(120))
     print("1. Play")
     print("2. Mode")
@@ -65,6 +66,11 @@ while True:
     elif user_choice == options[1]:
         modes = ['Easy','Medium','Hard']
         while True:
+            clear_screen()
+            print("\nLoading...")
+            time.sleep(2)
+            clear_screen()
+            print("\033[1m==== Mode ====\033[0m\n".center(120))
             print("1. Easy\n2. Medium\n3. Hard")
             user_mode_choice = input("Enter the mode you want to select : ").capitalize()
             if user_mode_choice not in modes:
@@ -72,6 +78,12 @@ while True:
                 time.sleep(2)
                 clear_screen()
                 continue
+            print(f"\n\033[1m{user_mode_choice.capitalize()} mode selected.\033[0m")
+            time.sleep(3)
+            clear_screen()
+            print("\nLoading to menu...")
+            time.sleep(2)
+            clear_screen()
             break
     elif user_choice == options[0]:
         numberOfquestions()
@@ -94,6 +106,7 @@ while True:
                 for j in range(5,0,-1):
                     print(j,end=" ",flush=True)
                     time.sleep(1)
+                clear_screen()
                 print(f"\nQuestion {i} : {num1} {computer__operand__choice} {num2}")
                 while True:
                     try:
@@ -129,10 +142,10 @@ while True:
         while True:
             user_input = input("\nPress Enter Key to go back to Menu. ")
             if user_input == '':
+                clear_screen()
                 print("\nLoading to menu...")
                 time.sleep(2)
-                print("Menu Loaded Successfully...")
-                clear_screen() 
+                clear_screen()
                 break
             else: 
                 print("Invalid Input!")
@@ -145,6 +158,6 @@ while True:
             time.sleep(1)
         break
 clear_screen()
-print("\nGame Exited Successfully...")
-print("Developed by Muhammad Hammad Ateeq.")
+print("Game Exited Successfully...")
+print("Developed by \033[1mMuhammad Hammad Ateeq.\033[0m")
 time.sleep(3)
