@@ -8,7 +8,7 @@ while True :
         bmi_value=f"Your BMI is : {BMI:.1f} kg/m^2"
         if BMI <= 18.4:
             result="You are Underweight."
-        elif BMI >= 18.5 and BMI <=24.9:
+        elif BMI >= 18.5 and BMI <=24.9: 
             result="Your weight is Normal."
         elif BMI >= 25 and BMI <= 39.9:
             result="You are Overweight."
