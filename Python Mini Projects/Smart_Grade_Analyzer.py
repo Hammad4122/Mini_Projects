@@ -37,8 +37,8 @@ while True:
         student_data.to_csv("Result.csv",mode='a',index=False,header=not pd.io.common.file_exists("Result.csv"))
         print("Data saved succesfully...\n")
         print(student_data)
-        cont = input("Do you want to enter another student? (y/n): ")
-        if cont.lower() != "y":
+        condition = input("Do you want to enter another student? (y/n): ")
+        if condition.lower() != 'y':
             break
 
     except ZeroDivisionError:

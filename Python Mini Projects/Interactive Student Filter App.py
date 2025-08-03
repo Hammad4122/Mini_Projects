@@ -54,7 +54,7 @@ data = {
     "Grade": ["A+", "A", "C", "A", "B", "D", "F", "A+"],
     "City": ["Lahore", "Karachi", "Lahore", "Islamabad", "Lahore", "Karachi", "Islamabad", "Lahore"]
 }
-df = pd.DataFrame(data,index=[1,2,3,4,5,6,7,8])
+df = pd.DataFrame(data,index=[i for i in range(1,9)])
 status = ['Pass' if marks >= 60 else 'Fail' for marks in df['Marks']]
 df['Status'] = status
 df.to_csv("Students Record.csv", mode='w', index=False,header= not pd.io.common.file_exists("Students Record.csv"))
