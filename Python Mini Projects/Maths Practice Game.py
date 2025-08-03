@@ -40,7 +40,7 @@ while True:
         time.sleep(2.5);os.system('CLS')
         continue
     print(f"You have got {correct_answers} correct ✅ answers out of {numberOfquestions}.")
-    user_exit_choice = input("Do you want to continue (y/n) : ")
+    user_exit_choice = input("Do you want to continue (y/n) : ").lower()
     if user_exit_choice == 'y':
         os.system('CLS')
         continue
