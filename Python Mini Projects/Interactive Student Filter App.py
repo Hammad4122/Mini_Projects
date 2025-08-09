@@ -30,10 +30,11 @@ def specified_city():
         time.sleep(2)
         print(f"Founded {len(studentsOfcity)} students.")
         time.sleep(2)
-        print(f"These are the students from {City} : {studentsOfcity}")
-        see_student_record = input("Enter name to see the record of the student : ").capitalize()
+        studentsOfcity_df = pd.DataFrame(studentsOfcity)
+        print(f"These are the students from {City} : {studentsOfcity_df}")
+        see_student_record = input("\nEnter name to see the record of the student : ").capitalize()
         if see_student_record in studentsOfcity:
-            print("Loading")
+            print("Loading...\n")
             time.sleep(2)
             print(df[df["Name"] == see_student_record])
         else:
@@ -42,22 +43,16 @@ def specified_city():
         print("No student found!")
 def lowerGrade_students():
     print("Students with C grade or lower : \n",df.loc[(df['Grade'] == 'C') | (df['Grade'] == 'F'), ['Name', 'Grade']])
-def exit():
+def exit_program():
     print("Closing...")
     time.sleep(3)
     print("Program closed successfully.")
     time.sleep(1.5)
 
-data = {
-    "Name": ["Hammad", "Fatima", "Ali", "Zaid", "Sana", "Areeba", "Usman", "Iqra"],
-    "Marks": [95, 81, 67, 88, 72, 59, 48, 92],
-    "Grade": ["A+", "A", "C", "A", "B", "D", "F", "A+"],
-    "City": ["Lahore", "Karachi", "Lahore", "Islamabad", "Lahore", "Karachi", "Islamabad", "Lahore"]
-}
-df = pd.DataFrame(data,index=[i for i in range(1,9)])
-status = ['Pass' if marks >= 60 else 'Fail' for marks in df['Marks']]
-df['Status'] = status
-df.to_csv("Students Record.csv", mode='w', index=False,header= not pd.io.common.file_exists("Students Record.csv"))
+df = pd.read_csv(r"C:\Coding Journey\Pyhton Journey\Mini_Projects\Python Mini Projects\assets\interactive_students_filter_app_data.csv")
+df["Status"] = ['Pass' if marks >= 60 else 'Fail' for marks in df['Marks']]
+
+df.to_csv(r"C:\Coding Journey\Pyhton Journey\Mini_Projects\Python Mini Projects\assets\interactive_students_filter_app_data.csv", mode='w', index=False)
 while True:
     menu()
     while True:
@@ -88,7 +83,7 @@ while True:
         lowerGrade_students()
     if user_choice == 5:
         os.system('CLS')
-        exit()
+        exit_program()
         break
     input("\nPress Enter to go back to menu.")
     loadingTomenu()
