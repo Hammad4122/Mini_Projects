@@ -8,15 +8,19 @@ def menu():
     print("3. Show Students who Passed (Marks ≥ 60)")
     print("4. Show Students with Grade C or lower")
     print("5. Exit")
+    
 def loadingTomenu():
     os.system('CLS')
     print("Loading to menu...")
     time.sleep(2)
     os.system('CLS')
+
 def Aplus_Students ():
     print("Students with A+ grade : \n",df.loc[df['Grade'] == 'A+', ['Name', 'Grade']])
+
 def passed_students():
     print("Passed Students : \n",df.loc[df['Marks'] >= 60,['Name','Marks','Status']])
+
 def specified_city():
     global City
     global studentsOfcity
@@ -41,8 +45,10 @@ def specified_city():
             print("Invalid name entered.")
     else:
         print("No student found!")
+
 def lowerGrade_students():
     print("Students with C grade or lower : \n",df.loc[(df['Grade'] == 'C') | (df['Grade'] == 'F'), ['Name', 'Grade']])
+
 def exit_program():
     print("Closing...")
     time.sleep(3)
@@ -50,9 +56,6 @@ def exit_program():
     time.sleep(1.5)
 
 df = pd.read_csv(r"C:\Coding Journey\Pyhton Journey\Mini_Projects\Python Mini Projects\assets\interactive_students_filter_app_data.csv")
-df["Status"] = ['Pass' if marks >= 60 else 'Fail' for marks in df['Marks']]
-
-df.to_csv(r"C:\Coding Journey\Pyhton Journey\Mini_Projects\Python Mini Projects\assets\interactive_students_filter_app_data.csv", mode='w', index=False)
 while True:
     menu()
     while True:
